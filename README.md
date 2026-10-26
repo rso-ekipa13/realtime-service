@@ -1,16 +1,13 @@
 # realtime-service
 
-WebSocket gateway for live delivery, presence and typing indicators. .NET 10, NATS.
+Keeps a WebSocket open to every app that is online and pushes new messages to it as they arrive. It also tracks presence and relays encrypted typing indicators. It stores nothing permanently; presence lives in a NATS key-value bucket that expires on its own.
 
-Part of an end-to-end encrypted messenger built for *Računalniške storitve v oblaku* (UL FRI, 2026/27) by project group 13.
+Built with .NET 10 and NATS. Scales with the number of open connections.
 
-| | |
-|---|---|
-| Owner | Amar Mehić |
-| Stack | .NET 10, WebSockets, NATS |
-| Status | Planned; scaffolding starts in week 1 (27. 10.–8. 11. 2026) |
-| Architecture and plan | <https://github.com/rso-ekipa13/docs> |
+Owner: Amar Mehić. Status: planned.
 
-## Branches
+## Where this fits
 
-`main` is protected (pull requests only) and deployable; `dev` is the integration branch.
+This is one of the repositories of [Pretty Good Pigeon](https://github.com/rso-ekipa13), an end-to-end encrypted messenger built by ekipa 13 for the Cloud Computing course at UL FRI (2026/27). The architecture, plan and decisions live in [docs](https://github.com/rso-ekipa13/docs).
+
+`main` only changes through pull requests; day-to-day work goes to `dev`.
